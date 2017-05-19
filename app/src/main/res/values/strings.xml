@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">TallerConstructora</string>
+    <string name="titulo">REGISTRO</string>
+    <string name="numeroa">Numero del apartamento</string>
+    <string name="piso">Numero del piso</string>
+    <string name="buscar">BUSCAR</string>
+    <string name="nomenclatura">Nomenclatura del apartamento</string>
+    <string name="caracteristica">Caracteristica</string>
+    <string name="balcon">Balcon</string>
+    <string name="sombra">Sombra</string>
+    <string name="precio">Precio</string>
+    <string name="tamaño">Tamaño medido en metros cuadrados</string>
+    <string name="agregar">AGREGAR</string>
+    <string name="modificar">MODIFICAR</string>
+    <string name="borrar">BORRAR</string>
+    <string name="eliminar">ELIMINAR</string>
+</resources>
