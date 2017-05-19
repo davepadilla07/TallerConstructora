@@ -11,7 +11,7 @@ import android.database.sqlite.SQLiteOpenHelper;
 public class ApartamentosSQLiteOpenHelper extends SQLiteOpenHelper {
     private String sql="CREATE TABLE Apartamentos(numero text, piso text, nomenclatura text, caracteristica text, tamaño text, precio text)";
 
-    private ApartamentosSQLiteOpenHelper(Context contexto, String name, SQLiteDatabase.CursorFactory factory, int version){
+    ApartamentosSQLiteOpenHelper(Context contexto, String name, SQLiteDatabase.CursorFactory factory, int version){
         super(contexto,name,factory,version);
 
     }

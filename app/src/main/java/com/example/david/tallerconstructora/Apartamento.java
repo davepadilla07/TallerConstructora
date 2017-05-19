@@ -1,5 +1,8 @@
 package com.example.david.tallerconstructora;
 
+import android.content.Context;
+import android.database.sqlite.SQLiteDatabase;
+
 /**
  * Created by DAVID on 19/05/2017.
  */
@@ -67,5 +70,65 @@ public class Apartamento {
 
     public void setPrecio(String precio) {
         this.precio = precio;
+    }
+
+    public void guardar(Context contexto){
+
+        SQLiteDatabase db;
+        String sql;
+
+        ApartamentosSQLiteOpenHelper aux = new ApartamentosSQLiteOpenHelper(contexto,"DBApartamentos",null,1);
+        db=aux.getWritableDatabase();
+
+        sql="INSERT INTO Apartamentos values('"
+                +this.getNumero()+"','"
+                +this.getPiso()+"','"
+                +this.getNomenclatura()+"','"
+                +this.getCaracteristica()+"','"
+                +this.getTamaño()+"','"
+                +this.getPrecio()+"')";
+
+        db.execSQL(sql);
+
+        db.close();
+    }
+
+    public void eliminar(Context contexto){
+
+        SQLiteDatabase db;
+        String sql;
+
+        ApartamentosSQLiteOpenHelper aux = new ApartamentosSQLiteOpenHelper(contexto,"DBApartamentos",null,1);
+        db=aux.getWritableDatabase();
+
+        sql="DELETE FROM Apartamentos where"+" numero='"+this.getNumero()+"',"+" piso='"+this.getPiso()+"'";
+
+        db.execSQL(sql);
+
+        db.close();
+    }
+
+    public void modificar(Context contexto){
+
+        SQLiteDatabase db;
+        String sql;
+
+        ApartamentosSQLiteOpenHelper aux = new ApartamentosSQLiteOpenHelper(contexto,"DBApartamentos",null,1);
+        db=aux.getWritableDatabase();
+
+        sql="UPDATE Apartamentos"+" SET numero='"
+                +this.getNumero()+"',"
+                +" piso='"+this.getPiso()+"',"
+                +" nomenclatura='"+this.getNomenclatura()+"',"
+                +" caracteristica='"+this.getCaracteristica()+"',"
+                +" tamaño='"+this.getTamaño()+"',"
+                +" precio='"+this.getPrecio()+"',"
+                +" where"+" numero='"+this.getNumero()+"',"
+                +" piso='"+this.getPiso()+"'";
+
+        db.execSQL(sql);
+
+        db.close();
+
     }
 }
