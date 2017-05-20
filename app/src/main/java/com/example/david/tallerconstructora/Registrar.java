@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.CheckBox;
 import android.widget.EditText;
+import android.widget.RadioButton;
 import android.widget.Toast;
 
 public class Registrar extends AppCompatActivity {
@@ -16,7 +17,6 @@ public class Registrar extends AppCompatActivity {
     private EditText cajaNomenclatura;
     private CheckBox chkBalcon;
     private CheckBox chkSombra;
-    private CheckBox chkNinguna;
     private EditText cajaTamaño;
     private EditText cajaPrecio;
 
@@ -31,9 +31,8 @@ public class Registrar extends AppCompatActivity {
         cajaTamaño=(EditText)findViewById(R.id.txtTamaño);
         cajaPrecio=(EditText)findViewById(R.id.txtPrecio);
 
-        chkBalcon=(CheckBox)findViewById(R.id.chkBalcon);
-        chkSombra=(CheckBox)findViewById(R.id.chkSombra);
-        chkNinguna=(CheckBox)findViewById(R.id.chkNinguna);
+        chkBalcon=(CheckBox) findViewById(R.id.chkBalcon);
+        chkSombra=(CheckBox) findViewById(R.id.chkSombra);
 
     }
 
@@ -63,10 +62,6 @@ public class Registrar extends AppCompatActivity {
             cajaPrecio.requestFocus();
             return false;
         }
-        if ((!chkBalcon.isChecked())&&(!chkSombra.isChecked())&&(!chkNinguna.isChecked())){
-            Toast.makeText(getApplicationContext(),getResources().getString(R.string.error6),Toast.LENGTH_SHORT).show();
-            return false;
-        }
 
 
         return true;
@@ -80,12 +75,11 @@ public class Registrar extends AppCompatActivity {
         cajaPrecio.setText("");
         chkBalcon.setChecked(false);
         chkSombra.setChecked(false);
-        chkNinguna.setChecked(false);
         cajaNumero.requestFocus();
     }
 
     public void guardar(View v){
-        String numero,piso,nomenclatura,caracteristica="",tamaño,precio;
+        String numero,piso,nomenclatura,balcon,sombra,tamaño,precio;
         Apartamento p;
         if (validar()){
 
@@ -96,17 +90,17 @@ public class Registrar extends AppCompatActivity {
             precio=cajaPrecio.getText().toString();
 
             if (chkBalcon.isChecked()){
-                caracteristica=getResources().getString(R.string.balcon)+",";
+                balcon=getResources().getString(R.string.si);
+            }else{
+                balcon=getResources().getString(R.string.no);
             }
             if (chkSombra.isChecked()){
-                caracteristica=getResources().getString(R.string.sombra)+",";
-            }
-            if (chkNinguna.isChecked()){
-                caracteristica=getResources().getString(R.string.ninguna)+", ";
+                sombra=getResources().getString(R.string.si);
+            }else{
+                sombra=getResources().getString(R.string.no);
             }
 
-            caracteristica=caracteristica.substring(0,caracteristica.length()-2);
-            p=new Apartamento(numero,piso,nomenclatura,caracteristica,tamaño,precio);
+            p=new Apartamento(numero,piso,nomenclatura,balcon,sombra,tamaño,precio);
             p.guardar(getApplicationContext());
 
             Toast.makeText(getApplicationContext(),getResources().getString(R.string.mensaje1),Toast.LENGTH_SHORT).show();
@@ -132,7 +126,7 @@ public class Registrar extends AppCompatActivity {
 
     public void buscar(View v){
         Apartamento p;
-        String caracteristica;
+        String balcon,sombra;
         if (validarAlBuscar()){
             p=Datos.buscarApartamento(getApplicationContext(),cajaNumero.getText().toString(),cajaPiso.getText().toString());
             if (p!=null){
@@ -140,17 +134,20 @@ public class Registrar extends AppCompatActivity {
                 cajaTamaño.setText(p.getTamaño());
                 cajaPrecio.setText(p.getPrecio());
 
-                caracteristica=p.getCaracteristica();
-                if(caracteristica.contains(getResources().getString(R.string.balcon)))chkBalcon.setChecked(true);
-                if(caracteristica.contains(getResources().getString(R.string.sombra)))chkSombra.setChecked(true);
-                if(caracteristica.contains(getResources().getString(R.string.ninguna)))chkNinguna.setChecked(true);
+                balcon=p.getBalcon();
+                if(balcon.contains(getResources().getString(R.string.si)))chkBalcon.setChecked(true);
+                else chkBalcon.setChecked(false);
+
+                sombra=p.getBalcon();
+                if(sombra.contains(getResources().getString(R.string.si)))chkSombra.setChecked(true);
+                else chkSombra.setChecked(false);
             }
         }
     }
 
     public void eliminar (View v){
         Apartamento p;
-        String pasatiempos;
+
         if (validarAlBuscar()){
             p=Datos.buscarApartamento(getApplicationContext(),cajaNumero.getText().toString(),cajaPiso.getText().toString());
             if (p!=null){
@@ -183,7 +180,7 @@ public class Registrar extends AppCompatActivity {
     }
 
     public void modificar(View v){
-        String numero,piso,nomenclatura,caracteristica="",tamaño,precio;
+        String numero,piso,nomenclatura,balcon,sombra,tamaño,precio;
         Apartamento p,p2;
         if (validarAlBuscar()){
             p=Datos.buscarApartamento(getApplicationContext(),cajaNumero.getText().toString(),cajaPiso.getText().toString());
@@ -195,18 +192,15 @@ public class Registrar extends AppCompatActivity {
                 tamaño = cajaTamaño.getText().toString();
                 precio = cajaPrecio.getText().toString();
 
-                if (chkBalcon.isChecked()) {
-                    caracteristica = getResources().getString(R.string.balcon) + ",";
-                }
-                if (chkSombra.isChecked()) {
-                    caracteristica = getResources().getString(R.string.sombra) + ",";
-                }
-                if (chkNinguna.isChecked()) {
-                    caracteristica = getResources().getString(R.string.ninguna) + ", ";
-                }
+                balcon=p.getBalcon();
+                if(balcon.contains(getResources().getString(R.string.si)))chkBalcon.setChecked(true);
+                else chkBalcon.setChecked(false);
 
-                caracteristica = caracteristica.substring(0, caracteristica.length() - 2);
-                p2 = new Apartamento(numero, piso, nomenclatura, caracteristica, tamaño, precio);
+                sombra=p.getBalcon();
+                if(sombra.contains(getResources().getString(R.string.si)))chkSombra.setChecked(true);
+                else chkSombra.setChecked(false);
+
+                p2 = new Apartamento(numero, piso, nomenclatura, balcon, sombra, tamaño, precio);
                 p2.guardar(getApplicationContext());
 
                 Toast.makeText(getApplicationContext(),getResources().getString(R.string.mensaje4),Toast.LENGTH_SHORT).show();

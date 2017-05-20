@@ -16,10 +16,10 @@ public class Datos {
         ArrayList<Apartamento> apartamentos = new ArrayList<>();
 
         SQLiteDatabase db;
-        String sql,numero,piso,nomenclatura,caracteristica,tamaño,precio;
+        String sql,numero,piso,nomenclatura,balcon,sombra,tamaño,precio;
         Apartamento p;
 
-        ApartamentosSQLiteOpenHelper aux = new ApartamentosSQLiteOpenHelper(contexto,"DBApartamentos",null,1);
+        ApartamentosSQLiteOpenHelper aux = new ApartamentosSQLiteOpenHelper(contexto,"DBApartamentos",null,4);
         db=aux.getReadableDatabase();
 
         sql="select * from Apartamentos";
@@ -31,10 +31,11 @@ public class Datos {
                 numero=c.getString(0);
                 piso=c.getString(1);
                 nomenclatura=c.getString(2);
-                caracteristica=c.getString(3);
-                tamaño=c.getString(4);
-                precio=c.getString(5);
-                p=new Apartamento(numero,piso,nomenclatura,caracteristica,tamaño,precio);
+                balcon=c.getString(3);
+                sombra=c.getString(4);
+                tamaño=c.getString(5);
+                precio=c.getString(6);
+                p=new Apartamento(numero,piso,nomenclatura,balcon,sombra,tamaño,precio);
                 apartamentos.add(p);
 
             }while(c.moveToNext());
@@ -49,10 +50,10 @@ public class Datos {
     public static Apartamento buscarApartamento(Context contexto, String num, String pis){
 
         SQLiteDatabase db;
-        String sql,numero,piso,nomenclatura,caracteristica,tamaño,precio;
+        String sql,numero,piso,nomenclatura,balcon,sombra,tamaño,precio;
         Apartamento p=null;
 
-        ApartamentosSQLiteOpenHelper aux = new ApartamentosSQLiteOpenHelper(contexto,"DBApartamentos",null,1);
+        ApartamentosSQLiteOpenHelper aux = new ApartamentosSQLiteOpenHelper(contexto,"DBApartamentos",null,4);
         db=aux.getReadableDatabase();
 
         sql="select * from Apartamentos where"+" numero='"+num+"',"+" piso='"+pis+"'";
@@ -63,10 +64,11 @@ public class Datos {
             numero=c.getString(0);
             piso=c.getString(1);
             nomenclatura=c.getString(2);
-            caracteristica=c.getString(3);
-            tamaño=c.getString(4);
-            precio=c.getString(5);
-            p=new Apartamento(numero,piso,nomenclatura,caracteristica,tamaño,precio);
+            balcon=c.getString(3);
+            sombra=c.getString(4);
+            tamaño=c.getString(5);
+            precio=c.getString(6);
+            p=new Apartamento(numero,piso,nomenclatura,balcon,sombra,tamaño,precio);
 
         }
 

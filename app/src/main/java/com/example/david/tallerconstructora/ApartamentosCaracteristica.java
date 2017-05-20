@@ -26,17 +26,16 @@ public class ApartamentosCaracteristica extends AppCompatActivity {
 
     public void reporte(View v){
         int cont=0;
-        String balcon,sombra;
-
 
         apartamentos=Datos.traerApartamentos(getApplicationContext());
         for (int i = 0; i < apartamentos.size(); i++) {
-            if ((apartamentos.get(i).getCaracteristica()==res.getString(R.string.balcon))&&(apartamentos.get(i).getCaracteristica()==res.getString(R.string.sombra))){
+            if ((apartamentos.get(i).getBalcon()==res.getString(R.string.si))&&(apartamentos.get(i).getSombra()==res.getString(R.string.si))){
                 cont=cont+1;
             }
-            aux=res.getString(R.string.apartamento_caracteristica)+" "+cont;
-            cajaResultado.setText(aux);
+
         }
+        aux=res.getString(R.string.apartamento_caracteristica)+" "+cont;
+        cajaResultado.setText(aux);
 
     }
 }

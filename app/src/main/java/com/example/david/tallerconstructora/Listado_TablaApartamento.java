@@ -29,13 +29,15 @@ public class Listado_TablaApartamento extends AppCompatActivity {
             TextView c4 = new TextView(this);
             TextView c5 = new TextView(this);
             TextView c6 = new TextView(this);
+            TextView c7 = new TextView(this);
 
             c1.setText(" "+apartamentos.get(i).getNumero());
             c2.setText(" "+apartamentos.get(i).getPiso());
             c3.setText(" "+apartamentos.get(i).getNomenclatura());
-            c4.setText(" "+apartamentos.get(i).getCaracteristica());
-            c5.setText(" "+apartamentos.get(i).getTamaño());
-            c6.setText(" "+apartamentos.get(i).getPrecio());
+            c4.setText(" "+apartamentos.get(i).getBalcon());
+            c5.setText(" "+apartamentos.get(i).getSombra());
+            c6.setText(" "+apartamentos.get(i).getTamaño());
+            c7.setText(" "+apartamentos.get(i).getPrecio());
 
             //Agregar columbas
             fila.addView(c1);
@@ -44,6 +46,7 @@ public class Listado_TablaApartamento extends AppCompatActivity {
             fila.addView(c4);
             fila.addView(c5);
             fila.addView(c6);
+            fila.addView(c7);
 
             //Agregar filas
             tabla.addView(fila);

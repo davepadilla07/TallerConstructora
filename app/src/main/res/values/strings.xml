@@ -8,13 +8,14 @@
     <string name="caracteristica">Caracteristica</string>
     <string name="balcon">Balcon</string>
     <string name="sombra">Sombra</string>
-    <string name="ninguna">Ninguna</string>
     <string name="precio">Precio</string>
     <string name="tamaño">Tamaño medido en metros cuadrados</string>
     <string name="guardar">GUARDAR</string>
     <string name="modificar">MODIFICAR</string>
     <string name="borrar">BORRAR</string>
     <string name="eliminar">ELIMINAR</string>
+    <string name="si">Si</string>
+    <string name="no">No</string>
     <string name="error1">Digite el numero del apartamento</string>
     <string name="error2">Digite el piso del apartamento</string>
     <string name="error3">Digite la nomenclatura del apartamento</string>
@@ -29,13 +30,15 @@
     <string name="confirmar">Confirmar</string>
     <string name="cancelar">Cancelar</string>
     <string name="registrar">Registrar apartamento</string>
-    <string name="apartamento_caracteristica">Numero de apartamentos con sombra y balcon</string>
-    <string name="apartamento_mas_caro">Piso del apartamento más caro</string>
-    <string name="apartamento_mayor_tamaño">Nomenclatura y metros cuadrados del apartamento mas grande</string>
-    <string name="promedio">Promedio de tamaño de los apartamentos</string>
+    <string name="apartamento_caracteristica">Los de sombra y balcon</string>
+    <string name="apartamento_mas_caro">Piso del caro</string>
+    <string name="apartamento_mayor_tamaño">Nomenclatura y tamaño del mas grande</string>
+    <string name="promedio">Promedio de tamaño</string>
     <string name="listado">Listado</string>
     <string name="medida">Metros cuadrados</string>
     <string name="reporte">GENERAR REPORTE</string>
+    <string name="es">es</string>
+    <string name="son">son</string>
     <string-array name="opciones">
         <item>@string/registrar</item>
         <item>@string/apartamento_caracteristica</item>

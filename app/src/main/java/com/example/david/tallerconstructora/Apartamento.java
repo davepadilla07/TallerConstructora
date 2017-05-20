@@ -11,15 +11,17 @@ public class Apartamento {
     private String numero;
     private String piso;
     private String nomenclatura;
-    private String caracteristica;
+    private String balcon;
+    private String sombra;
     private String tamaño;
     private String precio;
 
-    public Apartamento(String numero, String piso, String nomenclatura, String caracteristica, String tamaño, String precio) {
+    public Apartamento(String numero, String piso, String nomenclatura, String balcon, String sombra, String tamaño, String precio) {
         this.numero = numero;
         this.piso = piso;
         this.nomenclatura = nomenclatura;
-        this.caracteristica = caracteristica;
+        this.balcon = balcon;
+        this.sombra = sombra;
         this.tamaño = tamaño;
         this.precio = precio;
     }
@@ -48,12 +50,20 @@ public class Apartamento {
         this.nomenclatura = nomenclatura;
     }
 
-    public String getCaracteristica() {
-        return caracteristica;
+    public String getBalcon() {
+        return balcon;
     }
 
-    public void setCaracteristica(String caracteristica) {
-        this.caracteristica = caracteristica;
+    public void setBalcon(String balcon) {
+        this.balcon = balcon;
+    }
+
+    public String getSombra() {
+        return sombra;
+    }
+
+    public void setSombra(String sombra) {
+        this.sombra = sombra;
     }
 
     public String getTamaño() {
@@ -77,14 +87,15 @@ public class Apartamento {
         SQLiteDatabase db;
         String sql;
 
-        ApartamentosSQLiteOpenHelper aux = new ApartamentosSQLiteOpenHelper(contexto,"DBApartamentos",null,1);
+        ApartamentosSQLiteOpenHelper aux = new ApartamentosSQLiteOpenHelper(contexto,"DBApartamentos",null,4);
         db=aux.getWritableDatabase();
 
         sql="INSERT INTO Apartamentos values('"
                 +this.getNumero()+"','"
                 +this.getPiso()+"','"
                 +this.getNomenclatura()+"','"
-                +this.getCaracteristica()+"','"
+                +this.getBalcon()+"','"
+                +this.getSombra()+"','"
                 +this.getTamaño()+"','"
                 +this.getPrecio()+"')";
 
@@ -98,7 +109,7 @@ public class Apartamento {
         SQLiteDatabase db;
         String sql;
 
-        ApartamentosSQLiteOpenHelper aux = new ApartamentosSQLiteOpenHelper(contexto,"DBApartamentos",null,1);
+        ApartamentosSQLiteOpenHelper aux = new ApartamentosSQLiteOpenHelper(contexto,"DBApartamentos",null,4);
         db=aux.getWritableDatabase();
 
         sql="DELETE FROM Apartamentos where"+" numero='"+this.getNumero()+"',"+" piso='"+this.getPiso()+"'";
@@ -113,14 +124,15 @@ public class Apartamento {
         SQLiteDatabase db;
         String sql;
 
-        ApartamentosSQLiteOpenHelper aux = new ApartamentosSQLiteOpenHelper(contexto,"DBApartamentos",null,1);
+        ApartamentosSQLiteOpenHelper aux = new ApartamentosSQLiteOpenHelper(contexto,"DBApartamentos",null,4);
         db=aux.getWritableDatabase();
 
         sql="UPDATE Apartamentos"+" SET numero='"
                 +this.getNumero()+"',"
                 +" piso='"+this.getPiso()+"',"
                 +" nomenclatura='"+this.getNomenclatura()+"',"
-                +" caracteristica='"+this.getCaracteristica()+"',"
+                +" balcon='"+this.getBalcon()+"',"
+                +" sombra='"+this.getSombra()+"',"
                 +" tamaño='"+this.getTamaño()+"',"
                 +" precio='"+this.getPrecio()+"',"
                 +" where"+" numero='"+this.getNumero()+"',"
