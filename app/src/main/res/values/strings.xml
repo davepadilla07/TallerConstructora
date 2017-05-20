@@ -28,4 +28,19 @@
     <string name="confirmacion">Confirmacion</string>
     <string name="confirmar">Confirmar</string>
     <string name="cancelar">Cancelar</string>
+    <string name="registrar">Registrar apartamento</string>
+    <string name="apartamento_caracteristica">Numero de apartamentos con sombra y balcon</string>
+    <string name="apartamento_mas_caro">Piso del apartamento más caro</string>
+    <string name="apartamento_mayor_tamaño">Nomenclatura y metros cuadrados del apartamento mas grande</string>
+    <string name="promedio">Promedio de tamaño de los apartamentos</string>
+    <string name="listado">Listado</string>
+    <string name="medida">Metros cuadrados</string>
+    <string-array name="opciones">
+        <item>@string/registrar</item>
+        <item>@string/apartamento_caracteristica</item>
+        <item>@string/apartamento_mas_caro</item>
+        <item>@string/apartamento_mayor_tamaño</item>
+        <item>@string/promedio</item>
+        <item>@string/listado</item>
+    </string-array>
 </resources>

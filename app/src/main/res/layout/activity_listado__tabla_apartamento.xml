@@ -28,6 +28,7 @@
                     android:orientation="vertical">
 
                     <TableLayout
+                        android:id="@+id/tblApartamentos"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:stretchColumns="*">
@@ -46,35 +47,30 @@
                                 android:id="@+id/textView5"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:paddingStart="10dp"
                                 android:text="@string/piso" />
 
                             <TextView
                                 android:id="@+id/textView4"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:paddingStart="10dp"
                                 android:text="@string/nomenclatura" />
 
                             <TextView
                                 android:id="@+id/textView3"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:paddingStart="10dp"
                                 android:text="@string/caracteristica" />
 
                             <TextView
                                 android:id="@+id/textView2"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:paddingStart="10dp"
                                 android:text="@string/tamaño" />
 
                             <TextView
                                 android:id="@+id/textView"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:paddingStart="10dp"
                                 android:text="@string/precio" />
                         </TableRow>
                     </TableLayout>
