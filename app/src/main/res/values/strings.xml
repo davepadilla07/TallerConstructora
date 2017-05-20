@@ -35,6 +35,7 @@
     <string name="promedio">Promedio de tamaño de los apartamentos</string>
     <string name="listado">Listado</string>
     <string name="medida">Metros cuadrados</string>
+    <string name="reporte">GENERAR REPORTE</string>
     <string-array name="opciones">
         <item>@string/registrar</item>
         <item>@string/apartamento_caracteristica</item>
