@@ -26,7 +26,7 @@ public class ApartamentoPromedioT extends AppCompatActivity {
 
     public void reporte(View v){
         int cont=0;
-        Double cont2;
+        int prom=0;
         String tamaño="";
 
 
@@ -35,11 +35,11 @@ public class ApartamentoPromedioT extends AppCompatActivity {
         for (int i = 0; i < apartamentos.size(); i++) {
             cont=cont+Integer.parseInt(apartamentos.get(i).getTamaño());
             }
-
         }
-        cont2=cont
-        aux=res.getString(R.string.apartamento_mas_caro)+" "+res.getString(R.string.es)+" "+piso;
-        cajaResultado.setText(aux);
+
+
+
+
 
     }
-}
+

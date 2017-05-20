@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">TallerConstructora</string>
+    <string name="apartamento_caracteristica">Apartment with balcony and shadow</string>
+    <string name="apartamento_mas_caro">Floor more expensive</string>
+    <string name="apartamento_mayor_tamaño">Nomenclature and size of the largest</string>
+    <string name="balcon">Balcony</string>
+    <string name="borrar">CLEAR</string>
+    <string name="buscar">SEARCH</string>
+    <string name="cancelar">Cancel</string>
+    <string name="caracteristica">Characteristic</string>
+    <string name="confirmacion">Confirmation</string>
+    <string name="confirmar">Confirm</string>
+    <string name="eliminar">Remove</string>
+    <string name="error1">Enter the apartment number</string>
+    <string name="error2">Enter the apartment floor</string>
+    <string name="error3">Enter the apartment nomenclature</string>
+    <string name="error4"></string>
+</resources>
