@@ -66,6 +66,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_weight="1"
+                        android:onClick="buscar"
                         android:text="@string/buscar" />
                 </LinearLayout>
 
@@ -82,9 +83,7 @@
                     android:id="@+id/textView9"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
                     android:text="@string/caracteristica"
-                    android:textAlignment="textStart"
                     android:textSize="18sp"
                     android:textStyle="bold" />
 
@@ -138,13 +137,15 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:text="@string/agregar" />
+                        android:onClick="guardar"
+                        android:text="@string/guardar" />
 
                     <Button
                         android:id="@+id/button3"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
+                        android:onClick="modificar"
                         android:text="@string/modificar" />
 
                 </LinearLayout>
@@ -160,6 +161,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
+                        android:onClick="borrar"
                         android:text="@string/borrar" />
 
                     <Button
@@ -167,6 +169,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
+                        android:onClick="eliminar"
                         android:text="@string/eliminar" />
 
                 </LinearLayout>

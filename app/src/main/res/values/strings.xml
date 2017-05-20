@@ -11,7 +11,7 @@
     <string name="ninguna">Ninguna</string>
     <string name="precio">Precio</string>
     <string name="tamaño">Tamaño medido en metros cuadrados</string>
-    <string name="agregar">AGREGAR</string>
+    <string name="guardar">GUARDAR</string>
     <string name="modificar">MODIFICAR</string>
     <string name="borrar">BORRAR</string>
     <string name="eliminar">ELIMINAR</string>
@@ -21,4 +21,11 @@
     <string name="error4">Digite el numero del tamaño del area cuadrada del apartamento</string>
     <string name="error5">Digite el valor del apartamento</string>
     <string name="error6">Seleccione por lo menos una caracteristica</string>
+    <string name="mensaje1">Apartamento registrado exitosamente</string>
+    <string name="mensaje2">Apartamento eliminado exitosamente!</string>
+    <string name="mensaje3">¿Esta seguro(a) que desea eliminar este apartamento?</string>
+    <string name="mensaje4">Apartamento modificado exitosamente!</string>
+    <string name="confirmacion">Confirmacion</string>
+    <string name="confirmar">Confirmar</string>
+    <string name="cancelar">Cancelar</string>
 </resources>
