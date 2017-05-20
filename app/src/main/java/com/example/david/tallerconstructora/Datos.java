@@ -22,7 +22,7 @@ public class Datos {
         ApartamentosSQLiteOpenHelper aux = new ApartamentosSQLiteOpenHelper(contexto,"DBApartamentos",null,1);
         db=aux.getReadableDatabase();
 
-        sql="select from * Apartamentos";
+        sql="select * from Apartamentos";
         Cursor c=db.rawQuery(sql,null);
 
         if (c.moveToFirst()){
