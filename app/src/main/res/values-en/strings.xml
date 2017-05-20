@@ -40,4 +40,8 @@
     <string name="son">Are</string>
     <string name="tamaño">Size measured in square meters</string>
     <string name="titulo">REGISTRATION</string>
+    <string name="nomenclatura1">Nomenclature</string>
+    <string name="numero1">Number</string>
+    <string name="piso1">Floor</string>
+    <string name="tamaño1">Size</string>
 </resources>

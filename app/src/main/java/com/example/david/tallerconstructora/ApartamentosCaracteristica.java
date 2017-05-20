@@ -29,12 +29,12 @@ public class ApartamentosCaracteristica extends AppCompatActivity {
 
         apartamentos=Datos.traerApartamentos(getApplicationContext());
         for (int i = 0; i < apartamentos.size(); i++) {
-            if ((apartamentos.get(i).getBalcon()==res.getString(R.string.si))&&(apartamentos.get(i).getSombra()==res.getString(R.string.si))){
+            if ((apartamentos.get(i).getBalcon().equalsIgnoreCase(res.getString(R.string.si)))&&(apartamentos.get(i).getSombra().equalsIgnoreCase(res.getString(R.string.si)))){
                 cont=cont+1;
             }
 
         }
-        aux=res.getString(R.string.apartamento_caracteristica)+" "+cont;
+        aux=res.getString(R.string.apartamento_caracteristica)+" "+getResources().getString(R.string.son)+cont;
         cajaResultado.setText(aux);
 
     }
