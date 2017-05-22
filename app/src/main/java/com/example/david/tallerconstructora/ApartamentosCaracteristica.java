@@ -34,7 +34,7 @@ public class ApartamentosCaracteristica extends AppCompatActivity {
             }
 
         }
-        aux=res.getString(R.string.apartamento_caracteristica)+" "+getResources().getString(R.string.son)+cont;
+        aux=res.getString(R.string.apartamento_caracteristica)+" "+getResources().getString(R.string.son)+" "+cont;
         cajaResultado.setText(aux);
 
     }
