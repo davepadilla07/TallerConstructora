@@ -29,7 +29,7 @@ public class ApartamentosCaracteristica extends AppCompatActivity {
 
         apartamentos=Datos.traerApartamentos(getApplicationContext());
         for (int i = 0; i < apartamentos.size(); i++) {
-            if ((apartamentos.get(i).getBalcon().equalsIgnoreCase(res.getString(R.string.si)))&&(apartamentos.get(i).getSombra().equalsIgnoreCase(res.getString(R.string.si)))){
+            if ((apartamentos.get(i).getBalcon().equals(res.getString(R.string.si)))&&(apartamentos.get(i).getSombra().equals(res.getString(R.string.si)))){
                 cont=cont+1;
             }
 

@@ -28,13 +28,14 @@ public class ApartamentoMasCaro extends AppCompatActivity {
         int cont,cont1;
         String piso="";
 
-
         apartamentos=Datos.traerApartamentos(getApplicationContext());
         cont=Integer.parseInt(apartamentos.get(0).getPrecio());
         for (int i = 1; i < apartamentos.size(); i++) {
             cont1=Integer.parseInt(apartamentos.get(i).getPrecio());
             if (cont<cont1){
-                piso = apartamentos.get(i).getPiso();
+                //cont = Integer.parseInt(apartamentos.get(i).getPrecio());
+                cont=cont1;
+                piso=apartamentos.get(i).getPiso();
             }
 
         }

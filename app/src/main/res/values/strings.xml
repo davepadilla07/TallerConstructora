@@ -43,6 +43,11 @@
     <string name="reporte">GENERAR REPORTE</string>
     <string name="es">es</string>
     <string name="son">son</string>
+    <string name="op1">1</string>
+    <string name="op2">2</string>
+    <string name="op3">3</string>
+    <string name="op4">4</string>
+    <string name="op5">5</string>
     <string-array name="opciones">
         <item>@string/registrar</item>
         <item>@string/apartamento_caracteristica</item>
@@ -51,4 +56,17 @@
         <item>@string/promedio</item>
         <item>@string/listado</item>
     </string-array>
+    <string-array name="opcionesnumero">
+        <item>@string/op1</item>
+        <item>@string/op2</item>
+        <item>@string/op3</item>
+    </string-array>
+    <string-array name="opcionespiso">
+        <item>@string/op1</item>
+        <item>@string/op2</item>
+        <item>@string/op3</item>
+        <item>@string/op4</item>
+        <item>@string/op5</item>
+    </string-array>
+
 </resources>
