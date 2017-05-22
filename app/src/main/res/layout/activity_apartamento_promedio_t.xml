@@ -32,6 +32,11 @@
                     android:textSize="24sp"
                     android:textStyle="bold" />
 
+                <Spinner
+                    android:id="@+id/cmbPisoP"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
                 <TextView
                     android:id="@+id/txtResultado5"
                     android:layout_width="match_parent"
@@ -43,6 +48,7 @@
                     android:id="@+id/button9"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:onClick="reporte"
                     android:text="@string/reporte" />
             </LinearLayout>
         </HorizontalScrollView>

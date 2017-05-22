@@ -128,8 +128,6 @@ public class Apartamento {
         db=aux.getWritableDatabase();
 
         sql="UPDATE Apartamentos"+" SET numero='"
-                +this.getNumero()+"',"
-                +" piso='"+this.getPiso()+"',"
                 +" nomenclatura='"+this.getNomenclatura()+"',"
                 +" balcon='"+this.getBalcon()+"',"
                 +" sombra='"+this.getSombra()+"',"

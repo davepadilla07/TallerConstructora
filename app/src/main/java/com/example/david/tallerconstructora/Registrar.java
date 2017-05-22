@@ -14,9 +14,7 @@ import android.widget.Spinner;
 import android.widget.Toast;
 
 public class Registrar extends AppCompatActivity {
-    //private EditText cajaNumero;
     private Spinner comboNumero;
-    //private EditText cajaPiso;
     private Spinner comboPiso;
     private ArrayAdapter<String> adapter,adapter1;
     private String[] opc,opc1;
@@ -31,8 +29,6 @@ public class Registrar extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_registrar);
 
-        /*cajaNumero=(EditText)findViewById(R.id.txtNumero);
-        cajaPiso=(EditText)findViewById(R.id.txtPiso);*/
         cajaNomenclatura=(EditText)findViewById(R.id.txtNomenclatura);
         cajaTamaño=(EditText)findViewById(R.id.txtTamaño);
         cajaPrecio=(EditText)findViewById(R.id.txtPrecio);
@@ -55,16 +51,7 @@ public class Registrar extends AppCompatActivity {
     }
 
     public Boolean validar(){
-        /*if (cajaNumero.getText().toString().isEmpty()){
-            cajaNumero.setError(getResources().getString(R.string.error1));
-            cajaNumero.requestFocus();
-            return false;
-        }
-        if (cajaPiso.getText().toString().isEmpty()){
-            cajaPiso.setError(getResources().getString(R.string.error2));
-            cajaPiso.requestFocus();
-            return false;
-        }*/
+
         if (cajaNomenclatura.getText().toString().isEmpty()){
             cajaNomenclatura.setError(getResources().getString(R.string.error3));
             cajaNomenclatura.requestFocus();
@@ -86,8 +73,7 @@ public class Registrar extends AppCompatActivity {
     }
 
     public void limpiar(){
-        /*cajaNumero.setText("");
-        cajaPiso.setText("");*/
+
         comboNumero.setSelection(0);
         comboPiso.setSelection(0);
         cajaNomenclatura.setText("");
@@ -128,28 +114,17 @@ public class Registrar extends AppCompatActivity {
         }
     }
 
-    /*public boolean validarAlBuscar(){
-        if (cajaNumero.getText().toString().isEmpty()){
-            cajaNumero.setError(getResources().getString(R.string.error1));
-            cajaNumero.requestFocus();
-            return false;
-        }
-        if (cajaPiso.getText().toString().isEmpty()){
-            cajaPiso.setError(getResources().getString(R.string.error2));
-            cajaPiso.requestFocus();
-            return false;
-        }
-        return true;
-    }*/
+
 
     public void borrar(View v){limpiar();}
 
     public void buscar(View v){
         Apartamento p;
         String balcon,sombra;
-        //if (validarAlBuscar()){
+
             p=Datos.buscarApartamento(getApplicationContext(),comboNumero.getSelectedItem().toString(),comboPiso.getSelectedItem().toString());
             if (p!=null){
+
                 cajaNomenclatura.setText(p.getNomenclatura());
                 cajaTamaño.setText(p.getTamaño());
                 cajaPrecio.setText(p.getPrecio());
@@ -162,13 +137,13 @@ public class Registrar extends AppCompatActivity {
                 if(sombra.contains(getResources().getString(R.string.si)))chkSombra.setChecked(true);
                 else chkSombra.setChecked(false);
             }
-        //}
+
     }
 
     public void eliminar (View v){
         Apartamento p;
 
-        //if (validarAlBuscar()){
+
             p=Datos.buscarApartamento(getApplicationContext(),comboNumero.getSelectedItem().toString(),comboPiso.getSelectedItem().toString());
             if (p!=null){
 
@@ -196,13 +171,13 @@ public class Registrar extends AppCompatActivity {
                 ventana.show();
 
             }
-        //}
+
     }
 
     public void modificar(View v){
         String numero,piso,nomenclatura,balcon,sombra,tamaño,precio;
         Apartamento p,p2;
-        //if (validarAlBuscar()){
+
             p=Datos.buscarApartamento(getApplicationContext(),comboNumero.getSelectedItem().toString(),comboPiso.getSelectedItem().toString());
             if (p!=null) {
 
@@ -226,7 +201,7 @@ public class Registrar extends AppCompatActivity {
                 Toast.makeText(getApplicationContext(),getResources().getString(R.string.mensaje4),Toast.LENGTH_SHORT).show();
                 limpiar();
             }
-        //}
+
     }
 
 }

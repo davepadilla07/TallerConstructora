@@ -37,7 +37,7 @@
     <string name="apartamento_caracteristica">Los de sombra y balcon</string>
     <string name="apartamento_mas_caro">Piso del caro</string>
     <string name="apartamento_mayor_tamaño">Nomenclatura y tamaño del mas grande</string>
-    <string name="promedio">Promedio de tamaño</string>
+    <string name="promedio">Promedio de tamaño en este piso</string>
     <string name="listado">Listado</string>
     <string name="medida">Metros cuadrados</string>
     <string name="reporte">GENERAR REPORTE</string>
